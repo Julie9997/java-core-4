@@ -33,23 +33,5 @@ public class Task1 {
             System.out.println("Ошибка: " + e.getMessage() + ", доступный баланс: " + e.getAvailableBalance());
         }
 
-
-        // к заданию 2
-        try {
-            Account account1 = new Account(1000.0);
-            Account account2 = new Account(2000.0);
-
-            System.out.println("Баланс до транзакции:");
-            System.out.println("account1: " + account1.getBalance());
-            System.out.println("account2: " + account2.getBalance());
-
-            Transaction.transfer(account1, account2, 500.0);
-
-            System.out.println("Баланс после транзакции:");
-            System.out.println("account1: " + account1.getBalance());
-            System.out.println("account2: " + account2.getBalance());
-        } catch (IllegalArgumentException e) {
-            System.out.println("Ошибка: " + e.getMessage());
-        }
     }
 }
